@@ -11,7 +11,7 @@ const CreateStudent = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:3000/api/students', { name, email });
+      const response = await axios.post('http://localhost:5000/api/students', { name, email });
       console.log('Student created:', response.data);
       alert('Student created successfully');
       setName('');

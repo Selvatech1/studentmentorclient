@@ -10,7 +10,7 @@ const ViewStudentsForMentor = () => {
     useEffect(() => {
         const fetchMentors = async () => {
             try {
-                const mentorsResponse = await axios.get('http://localhost:3000/api/mentors');
+                const mentorsResponse = await axios.get('http://localhost:5000/api/mentors');
                 setMentors(mentorsResponse.data);
             } catch (error) {
                 console.error('Error fetching mentors:', error);
@@ -24,7 +24,7 @@ const ViewStudentsForMentor = () => {
         const fetchStudents = async () => {
             if (selectedMentor) {
                 try {
-                    const studentsResponse = await axios.get(`http://localhost:3000/api/mentors/${selectedMentor}/students`);
+                    const studentsResponse = await axios.get(`http://localhost:5000/api/mentors/${selectedMentor}/students`);
                     setStudents(studentsResponse.data);
                 } catch (error) {
                     console.error('Error fetching students:', error);

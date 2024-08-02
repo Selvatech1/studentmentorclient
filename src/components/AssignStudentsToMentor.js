@@ -11,7 +11,7 @@ const AssignStudentsToMentor = () => {
   const handleAssign = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`http://localhost:3000/api/mentors/${mentorId}/students`, {
+      const response = await axios.post(`http://localhost:5000/api/mentors/${mentorId}/students`, {
         studentIds: studentIds.split(',').map(id => id.trim())
       });
       setMessage('Students assigned successfully');

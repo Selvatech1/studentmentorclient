@@ -12,8 +12,8 @@ const ChangeMentor = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const studentsResponse = await axios.get('http://localhost:3000/api/students');
-                const mentorsResponse = await axios.get('http://localhost:3000/api/mentors');
+                const studentsResponse = await axios.get('http://localhost:5000/api/students');
+                const mentorsResponse = await axios.get('http://localhost:5000/api/mentors');
                 setStudents(studentsResponse.data);
                 setMentors(mentorsResponse.data);
             } catch (err) {
