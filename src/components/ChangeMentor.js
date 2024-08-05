@@ -14,6 +14,8 @@ const ChangeMentor = () => {
             try {
                 const studentsResponse = await axios.get('https://mentorstudent-ivdv.onrender.com/api/students');
                 const mentorsResponse = await axios.get('https://mentorstudent-ivdv.onrender.com/api/mentors');
+                console.log('Students:', studentsResponse.data);
+                console.log('Mentors:', mentorsResponse.data);
                 setStudents(studentsResponse.data);
                 setMentors(mentorsResponse.data);
             } catch (err) {
@@ -28,7 +30,7 @@ const ChangeMentor = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.put(`http://localhost:3000/api/students/${selectedStudent}/mentor`, {
+            await axios.put(`https://mentorstudent-ivdv.onrender.com/api/students/${selectedStudent}/mentor`, {
                 mentorId: selectedMentor
             });
             setError(''); // Clear previous errors

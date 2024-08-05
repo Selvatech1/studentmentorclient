@@ -29,6 +29,7 @@ const ViewPreviousMentor = ({ studentId }) => {
       {mentor ? (
         <div>
           <p><strong>Name:</strong> {mentor.name}</p>
+          <p><strong>ID:</strong> {mentor.name}</p>
           {/* Add other mentor details if needed */}
         </div>
       ) : (

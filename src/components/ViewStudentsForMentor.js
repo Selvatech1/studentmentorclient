@@ -24,7 +24,7 @@ const ViewStudentsForMentor = () => {
         const fetchStudents = async () => {
             if (selectedMentor) {
                 try {
-                    const studentsResponse = await axios.get(`http://localhost:5000/api/mentors/${selectedMentor}/students`);
+                    const studentsResponse = await axios.get(`https://mentorstudent-ivdv.onrender.com/api/mentors/${selectedMentor}/students`);
                     setStudents(studentsResponse.data);
                 } catch (error) {
                     console.error('Error fetching students:', error);
