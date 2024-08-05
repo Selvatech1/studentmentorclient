@@ -10,7 +10,7 @@ const ViewStudentsForMentor = () => {
     useEffect(() => {
         const fetchMentors = async () => {
             try {
-                const mentorsResponse = await axios.get('http://localhost:5000/api/mentors');
+                const mentorsResponse = await axios.get('https://mentorstudent-ivdv.onrender.com/api/mentors');
                 setMentors(mentorsResponse.data);
             } catch (error) {
                 console.error('Error fetching mentors:', error);

@@ -8,7 +8,7 @@ function CreateMentor() {
   const handleCreateMentor = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/mentors', { name: mentorName });
+      await axios.post('https://mentorstudent-ivdv.onrender.com/api/mentors', { name: mentorName });
       alert('Mentor created successfully');
       setMentorName('');
     } catch (error) {

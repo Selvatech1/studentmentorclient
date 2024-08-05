@@ -8,7 +8,7 @@ const ViewPreviousMentor = ({ studentId }) => {
   useEffect(() => {
     const fetchMentor = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/api/students/${studentId}/mentor`);
+        const response = await axios.get(`https://mentorstudent-ivdv.onrender.com/api/students/${studentId}/mentor`);
         setMentor(response.data);
         setError('');
       } catch (err) {
